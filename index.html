@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/square-concrete-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css?v=20261031-centered-details">
-  <script src="/contact.js?v=20261031-contact-dialog" defer></script>
+  <script src="/contact.js?v=20261031-slack" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Square Harness">
   <meta property="og:title" content="Square Harness">
@@ -112,10 +112,7 @@
       <h2 id="contact-title">Contact</h2>
       <button class="contact-close" type="button" data-contact-close aria-label="Close contact form">×</button>
     </div>
-    <form class="contact-form" action="https://formsubmit.co/vincent.boulard@enpc.fr" method="POST">
-      <input type="hidden" name="_subject" value="Square Harness — contact">
-      <input type="hidden" name="_next" value="https://square-harness.github.io/contact-sent.html">
-      <input type="hidden" name="_template" value="table">
+    <form class="contact-form" action="https://square-harness-contact.vboulard07.chatgpt.site/contact" method="POST">
       <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label>Your name
         <input type="text" name="name" autocomplete="name" maxlength="100" required autofocus>
@@ -127,7 +124,8 @@
         <textarea name="message" rows="4" maxlength="10000" required></textarea>
       </label>
       <button type="submit">Send message</button>
-      <p class="service-note">Messages are sent through <a href="https://formsubmit.co/privacy.pdf">FormSubmit</a>.</p>
+      <p class="service-note">Messages are sent to the Square Harness team on Slack.</p>
+      <p class="service-note" data-contact-status role="status" aria-live="polite"></p>
     </form>
   </dialog>
 </body>

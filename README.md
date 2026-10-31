@@ -24,8 +24,11 @@ the browser provides modal focus management. The form stays hidden by default,
 including when a stylesheet is unavailable. Without JavaScript, an email link
 is shown instead.
 
-The contact form posts to FormSubmit, which forwards messages to the configured
-recipient after email activation. FormSubmit's default CAPTCHA remains enabled,
-and a hidden honeypot helps filter automated submissions. The confirmation page
-is `contact-sent.html`. Team names and personal website links are maintained in
-`index.html`.
+The contact form posts JSON to a server-side relay hosted with Sites. The relay
+keeps its Slack incoming webhook in secret runtime configuration and forwards
+submissions to the private `contact-sh` channel. The browser shows success only
+after Slack acknowledges delivery, keeps the entered message on errors, and
+disables the send button while waiting. A hidden honeypot and bounded requests
+help filter spam. The relay has its own tests and documentation in the adjacent
+`organization-contact-relay` checkout. No Slack credentials belong in this repo.
+Team names and personal website links are maintained in `index.html`.
