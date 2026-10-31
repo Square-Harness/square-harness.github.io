@@ -35,7 +35,6 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
 section { margin-top: 46px; }
 h2 { margin: 0 0 18px; font-size: 27px; line-height: 1.3; }
 p { margin: 0 0 20px; }
-.reference { margin-top: 26px; font-size: 18px; }
 ::selection { background: var(--selection); }
 @media (max-width: 560px) {
   body { font-size: 18px; }
