@@ -77,10 +77,42 @@
       <a href="https://github.com/Square-Harness/Square-Harness">GitHub repository</a>
       <a href="https://github.com/Square-Harness/Square-Harness/blob/main/docs/usage.md">Documentation</a>
     </nav>
+    <figure class="interface">
+      <a href="/assets/interface.png" aria-label="View the Square Harness interface at full size">
+        <img src="/assets/interface.png" alt="Square Harness interface, with a conversation sidebar, mathematical prompt examples, and a message editor." width="1872" height="1053" decoding="async">
+      </a>
+      <figcaption>The Square Harness interface.</figcaption>
+    </figure>
     <section aria-labelledby="why">
       <h2 id="why">Why an open harness?</h2>
       <p>Researchers and institutions should be able to run and control their own AI systems. This needs models, computing infrastructure, and a harness: the software that supplies context, connects tools, and organises the model’s work.</p>
       <p>As open-weight models improve, we want to make them useful in a mathematician’s working environment. Square Harness is our contribution to this effort. We develop it openly so that its workflows can be inspected, adapted, and run on infrastructure you control.</p>
+    </section>
+    <section class="contact" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <ul class="members">
+        <li><a href="https://github.com/antonincoatantiec">Antonin Coatantiec</a></li>
+        <li><a href="https://github.com/jb-himbert">Jean-Baptiste Himbert</a></li>
+        <li><a href="https://github.com/LouisCarillo">Louis Carillo</a></li>
+        <li><a href="https://github.com/vincentboulard">Vincent Boulard</a></li>
+      </ul>
+      <form class="contact-form" action="https://formsubmit.co/vincent.boulard@enpc.fr" method="POST">
+        <input type="hidden" name="_subject" value="Square Harness — contact">
+        <input type="hidden" name="_next" value="https://square-harness.github.io/contact-sent.html">
+        <input type="hidden" name="_template" value="table">
+        <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Your name
+          <input type="text" name="name" autocomplete="name" maxlength="100" required>
+        </label>
+        <label>Your email
+          <input type="email" name="email" autocomplete="email" maxlength="254" required>
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" maxlength="10000" required></textarea>
+        </label>
+        <button type="submit">Send message</button>
+        <p class="service-note">Messages are sent through <a href="https://formsubmit.co/privacy.pdf">FormSubmit</a>.</p>
+      </form>
     </section>
   </main>
 </body>
