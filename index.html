@@ -14,7 +14,8 @@
   <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/square-concrete-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/style.css?v=20261031-image-fit">
+  <link rel="stylesheet" href="/style.css?v=20261031-contact-dialog">
+  <script src="/contact.js?v=20261031-contact-dialog" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Square Harness">
   <meta property="og:title" content="Square Harness">
@@ -88,32 +89,42 @@
       <p>Researchers and institutions should be able to run and control their own AI systems. This needs models, computing infrastructure, and a harness: the software that supplies context, connects tools, and organises the model’s work.</p>
       <p>As open-weight models improve, we want to make them useful in a mathematician’s working environment. Square Harness is our contribution to this effort. We develop it openly so that its workflows can be inspected, adapted, and run on infrastructure you control.</p>
     </section>
-    <section class="contact" aria-labelledby="contact">
-      <h2 id="contact">Contact</h2>
-      <ul class="members">
-        <li><a href="https://github.com/antonincoatantiec">Antonin Coatantiec</a></li>
-        <li><a href="https://github.com/jb-himbert">Jean-Baptiste Himbert</a></li>
-        <li><a href="https://github.com/LouisCarillo">Louis Carillo</a></li>
-        <li><a href="https://github.com/vincentboulard">Vincent Boulard</a></li>
-      </ul>
-      <form class="contact-form" action="https://formsubmit.co/vincent.boulard@enpc.fr" method="POST">
-        <input type="hidden" name="_subject" value="Square Harness — contact">
-        <input type="hidden" name="_next" value="https://square-harness.github.io/contact-sent.html">
-        <input type="hidden" name="_template" value="table">
-        <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <label>Your name
-          <input type="text" name="name" autocomplete="name" maxlength="100" required>
-        </label>
-        <label>Your email
-          <input type="email" name="email" autocomplete="email" maxlength="254" required>
-        </label>
-        <label>Message
-          <textarea name="message" rows="5" maxlength="10000" required></textarea>
-        </label>
-        <button type="submit">Send message</button>
-        <p class="service-note">Messages are sent through <a href="https://formsubmit.co/privacy.pdf">FormSubmit</a>.</p>
-      </form>
+    <section class="team" aria-labelledby="team-title">
+      <h2 id="team-title">Team members</h2>
+      <div class="members">
+        <a href="https://vincentboulard.fr/">Vincent Boulard</a>
+        <a href="https://louiscarillo.github.io/">Louis Carillo</a>
+        <a href="https://antonincoatantiec.github.io/">Antonin Coatantiec</a>
+        <a href="https://jb-himbert.github.io/">Jean-Baptiste Himbert</a>
+      </div>
     </section>
+    <footer class="project-footer" id="contact">
+      <button class="contact-open" type="button" data-contact-open aria-haspopup="dialog" aria-controls="contact-dialog" hidden>Contact</button>
+    </footer>
+    <noscript><p><a href="mailto:vincent.boulard@enpc.fr">Contact by email</a></p></noscript>
   </main>
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+    <div class="dialog-header">
+      <h2 id="contact-title">Contact</h2>
+      <button class="contact-close" type="button" data-contact-close aria-label="Close contact form">×</button>
+    </div>
+    <form class="contact-form" action="https://formsubmit.co/vincent.boulard@enpc.fr" method="POST">
+      <input type="hidden" name="_subject" value="Square Harness — contact">
+      <input type="hidden" name="_next" value="https://square-harness.github.io/contact-sent.html">
+      <input type="hidden" name="_template" value="table">
+      <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label>Your name
+        <input type="text" name="name" autocomplete="name" maxlength="100" required autofocus>
+      </label>
+      <label>Your email
+        <input type="email" name="email" autocomplete="email" maxlength="254" required>
+      </label>
+      <label>Message
+        <textarea name="message" rows="4" maxlength="10000" required></textarea>
+      </label>
+      <button type="submit">Send message</button>
+      <p class="service-note">Messages are sent through <a href="https://formsubmit.co/privacy.pdf">FormSubmit</a>.</p>
+    </form>
+  </dialog>
 </body>
 </html>
