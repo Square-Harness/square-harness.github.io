@@ -3,73 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Square Harness — Mathematical proof work</title>
-  <meta name="description" content="An open-source harness for mathematical proof work: solve, verify, and repair, with every candidate and objection available for inspection.">
+  <title>Square Harness | Open-source AI tools for mathematical research</title>
+  <meta name="description" content="Square Harness is an open-source tool for mathematical research with language models, built for researchers who want to run and control their own AI systems.">
+  <link rel="canonical" href="https://square-harness.github.io/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
-  <style>
-    :root { color-scheme: light; --paper: #faf9f6; --ink: #20221e; --muted: #60665b; --line: #d8dcd1; --accent: #34634b; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    a { color: var(--accent); text-underline-offset: .2em; }
-    a:hover { text-decoration-thickness: 2px; }
-    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
-    .wrap { max-width: 940px; margin: auto; padding: 0 28px; }
-    header { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 650; letter-spacing: -.02em; }
-    .mark { width: 19px; height: 19px; border: 3px solid var(--accent); display: inline-block; }
-    nav { display: flex; gap: 22px; font-size: 14px; }
-    nav a { color: var(--ink); }
-    main { padding: 76px 0 52px; }
-    .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: 13px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
-    h1 { max-width: 760px; margin: 0 0 22px; font-size: clamp(38px, 6vw, 64px); line-height: 1.1; letter-spacing: -.045em; font-weight: 650; }
-    .intro { max-width: 670px; font-size: 20px; color: var(--muted); }
-    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin: 28px 0 48px; }
-    .button { display: inline-block; padding: 11px 19px; background: var(--accent); color: white; border-radius: 5px; font-size: 15px; font-weight: 600; text-decoration: none; }
-    .workflow { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; gap: 28px; }
-    h2 { margin: 0 0 8px; font-size: 21px; font-weight: 600; letter-spacing: -.02em; }
-    .workflow p { margin: 0; color: var(--muted); font-size: 15px; }
-    .note { max-width: 740px; margin: 30px 0 0; color: var(--muted); font-size: 15px; }
-    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding: 24px 0 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
-    @media (max-width: 600px) {
-      .wrap { padding: 0 22px; }
-      header { flex-wrap: wrap; gap: 12px; }
-      main { padding-top: 48px; }
-      .workflow { grid-template-columns: 1fr; gap: 24px; }
-    }
-    @media (prefers-color-scheme: dark) {
-      :root { color-scheme: dark; --paper: #181c19; --ink: #edf0e9; --muted: #b1baac; --line: #384237; --accent: #9ccead; }
-      .button { color: #18241b; }
-    }
-  </style>
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a2033" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/square-concrete-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Square Harness">
+  <meta property="og:title" content="Square Harness">
+  <meta property="og:description" content="An open-source tool for mathematical research with language models. AI systems that researchers can run and control themselves.">
+  <meta property="og:url" content="https://square-harness.github.io/">
+  <meta property="og:image" content="https://square-harness.github.io/assets/icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Square Harness notebook logo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Square Harness">
+  <meta name="twitter:description" content="An open-source tool for mathematical research with language models.">
+  <meta name="twitter:image" content="https://square-harness.github.io/assets/icon-512.png">
+  <meta name="twitter:image:alt" content="Square Harness notebook logo">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://square-harness.github.io/#website",
+        "name": "Square Harness",
+        "alternateName": "Square-Harness",
+        "url": "https://square-harness.github.io/",
+        "description": "An open-source tool for mathematical research with language models.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://square-harness.github.io/#organization" },
+        "about": { "@id": "https://square-harness.github.io/#software" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://square-harness.github.io/#organization",
+        "name": "Square Harness",
+        "url": "https://square-harness.github.io/",
+        "logo": "https://square-harness.github.io/assets/icon-512.png",
+        "sameAs": ["https://github.com/Square-Harness"]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://square-harness.github.io/#software",
+        "name": "Square Harness",
+        "description": "An open-source harness for mathematical research with language models.",
+        "url": "https://github.com/Square-Harness/Square-Harness",
+        "codeRepository": "https://github.com/Square-Harness/Square-Harness",
+        "programmingLanguage": "Python",
+        "license": "https://www.apache.org/licenses/LICENSE-2.0"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <div class="wrap">
+  <main class="page">
     <header>
-      <div class="brand"><span class="mark" aria-hidden="true"></span>Square Harness</div>
-      <nav aria-label="Main navigation">
-        <a href="https://github.com/Square-Harness/Square-Harness">GitHub</a>
-        <a href="https://github.com/Square-Harness/Square-Harness/blob/main/docs/usage.md">Documentation</a>
-      </nav>
+      <img class="logo" src="/assets/icon.svg" alt="" width="56" height="56">
+      <h1>Square Harness</h1>
     </header>
-    <main>
-      <p class="eyebrow">Open-source research software</p>
-      <h1>A harness for mathematical proof work.</h1>
-      <p class="intro">Square Harness connects a language model to a simple workflow: solve, verify, and repair when needed. Every candidate and objection is saved for inspection.</p>
-      <div class="actions">
-        <a class="button" href="https://github.com/Square-Harness/Square-Harness#quick-start">Get started</a>
-        <a href="https://github.com/Square-Harness/Square-Harness">Explore the source</a>
-      </div>
-      <section class="workflow" aria-label="The proof workflow">
-        <div><h2>Solve</h2><p>Give the model a substantial attempt at the whole problem.</p></div>
-        <div><h2>Verify</h2><p>Review the complete candidate and record concrete objections.</p></div>
-        <div><h2>Repair</h2><p>Revise when needed, keeping earlier candidates and reviews available.</p></div>
-      </section>
-      <p class="note">Square Harness is experimental. A model's approval is not a mathematical certificate; independent checking remains necessary.</p>
-    </main>
-    <footer>
-      <span>Created by Vincent Boulard, with Louis Carillo.</span>
-      <a href="https://github.com/Square-Harness/Square-Harness/blob/main/LICENSE">Apache License 2.0 · Harness source</a>
-    </footer>
-  </div>
+    <p class="intro">An open-source tool for mathematical research with language models.</p>
+    <nav aria-label="Project links">
+      <a href="https://github.com/Square-Harness/Square-Harness">GitHub repository</a>
+      <a href="https://github.com/Square-Harness/Square-Harness/blob/main/docs/usage.md">Documentation</a>
+    </nav>
+    <section aria-labelledby="why">
+      <h2 id="why">Why an open harness?</h2>
+      <p>Researchers and institutions should be able to run and control their own AI systems. This needs models, computing infrastructure, and a harness: the software that supplies context, connects tools, and organises the model’s work.</p>
+      <p>As open-weight models improve, we want to make them useful in a mathematician’s working environment. Square Harness is our contribution to this effort. We develop it openly so that its workflows can be inspected, adapted, and run on infrastructure you control.</p>
+      <p class="reference"><a href="https://vincentboulard.fr/blog/introducing-square-harness">Read the project introduction</a></p>
+    </section>
+    <p class="note">The project is experimental. A model’s review does not certify a proof.</p>
+  </main>
 </body>
 </html>

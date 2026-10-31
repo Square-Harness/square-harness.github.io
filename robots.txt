@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://square-harness.github.io/sitemap.xml
