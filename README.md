@@ -1,10 +1,14 @@
 # Square Harness website
 
-The organization website: <https://square-harness.github.io/>.
+The organization website: <https://squareharness.org/>.
+The hosted application: <https://app.squareharness.org/>.
 
 GitHub Pages publishes the root of `main`. The site uses HTML, CSS, and a small
 script for the contact dialog, with no build step. Edit `index.html` for content
-and search metadata, and `style.css` for presentation.
+and search metadata, and `style.css` for presentation. The `CNAME` file attaches
+`squareharness.org` to this existing GitHub Pages deployment; Cloudflare manages
+DNS. The Open Square Harness button leads to the separate, protected app
+subdomain.
 
 When changing the stylesheet, update its `v` query value in both HTML pages
 so returning browsers fetch the new CSS. Keep the screenshot's inline size
@@ -30,5 +34,6 @@ submissions to the private `contact-sh` channel. The browser shows success only
 after Slack acknowledges delivery, keeps the entered message on errors, and
 disables the send button while waiting. A hidden honeypot and bounded requests
 help filter spam. The relay has its own tests and documentation in the adjacent
-`organization-contact-relay` checkout. No Slack credentials belong in this repo.
+`organization-contact-relay` checkout. Its allowed browser origin must match
+`https://squareharness.org`. No Slack credentials belong in this repo.
 Team names and personal website links are maintained in `index.html`.
